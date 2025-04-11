@@ -23,7 +23,7 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test
+      run: npm test --detectOpenHandles
 
     - name: Docker Login
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
